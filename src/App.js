@@ -3,9 +3,14 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>homepage</h1>
-    </div>
+   <React.Fragment>
+    <header/>
+      <nav/>
+    <main/>
+    <footer/>
+
+    
+   </React.Fragment>
   );
 }
 
