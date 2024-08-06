@@ -1,16 +1,21 @@
 
+import Header from 'C:/Users/rbany/firstapp/src/componets/header';
+import Main from 'C:/Users/rbany/firstapp/src/componets/main';
+
+
+import { Fragment } from 'react';
 import './App.css';
+import Footer from './componets/footer';
+
 
 function App() {
   return (
-   <React.Fragment>
-    <header/>
-      <nav/>
-    <main/>
-    <footer/>
+   < Fragment>
+   <Header/>
+    <Main/>
+    <Footer/>
+   </Fragment>
 
-    
-   </React.Fragment>
   );
 }
 
