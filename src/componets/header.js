@@ -19,7 +19,7 @@ function Header(){
                                 <li><Link to="/" >Home</Link></li>
                                 <li><Link to="/inprogress">About</Link></li>
                                 <li><Link to="/inprogress">order online</Link></li>
-                                <li><Link to='\booking'>resrvation</Link></li>
+                                <li><Link to='/booking'>resrvation</Link></li>
                                 <li><Link to="/inprogress">login</Link></li>
                                 <li><Link to="/inprogress">menu</Link></li>
                         </ul>

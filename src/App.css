@@ -103,6 +103,9 @@ nav ul li a:hover{
   align-items: center;
   flex-wrap: wrap;
 }
+.spical-title h1{
+  font-size: 50px;
+}
 .cards{
   margin-top: 30px;
   display: flex;
@@ -154,7 +157,7 @@ nav ul li a:hover{
   
   
  }
- 
+ /*the owners story*/
  .aboutus{
   padding: 200px 13%;
   position: relative;
@@ -193,6 +196,67 @@ nav ul li a:hover{
   margin-bottom: 30px;
   color: #495e57;
  }
+ /*form resevation*/
+ .forma{
+  background-color: #e0e9e6;
+ }
+ .forma h1{
+  color: #EDEFEE;
+  background-color: #495e57;
+  text-align: center;
+ }
+ form{
+ width: 5px;
+ height: 1000px;
+    margin: 8px 0;
+    padding: 8px 460px;
+}
+
+fieldset{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 10px 0;
+ border: none;
+}
+input{
+  width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border-radius: 5px;
+}
+label{
+font-size: 20px;
+color: #495e57;
+}
+.btn{
+  background-color: #f4ce14;
+  color: #495e57;
+  border: none;
+}
+.btn:active{
+  background-color: #495e57;
+  color: #EDEFEE;
+}
+select{
+  width: 500px;
+  padding: 16px 20px;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+.confirm{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+.confirm div img{
+  width: 100px;
+  height: 100px;
+  
+}
+ /*footer*/
  .foot {
   background-color: #c1c1c1;
   color: #000000;
@@ -262,9 +326,10 @@ nav ul li a:hover{
    }
   
   }
-
+/* inprogress page*/
   h1{
     color: #495e57;
     
     padding: 100px 14%;
   }
+ 
