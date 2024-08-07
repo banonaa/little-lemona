@@ -210,14 +210,17 @@ nav ul li a:hover{
  height: 1000px;
     margin: 8px 0;
     padding: 8px 460px;
+    display: grid;
+    flex-direction: column;
+   
+
 }
 
 fieldset{
-  display: flex;
   flex-direction: column;
-  gap: 2rem;
   padding: 10px 0;
  border: none;
+ 
 }
 input{
   width: 100%;
@@ -256,6 +259,15 @@ select{
   height: 100px;
   
 }
+.click{
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2,0.5fr);
+  gap: 1rem;
+  padding: 12px 102px;
+  color: #000;
+  text-decoration: none;
+}
  /*footer*/
  .foot {
   background-color: #c1c1c1;
@@ -273,7 +285,7 @@ select{
   display: flex;
   text-decoration: underline solid #000;
 }
-@media (max-width: 960px) {
+@media (max-width: 800px) {
   .testimonial{
    flex-direction: column;  
    }  
@@ -285,6 +297,7 @@ select{
    }
    .navlink.visible{
     display: flex;
+    color: #fcfbfb;
     background-color: #333333;
     z-index: 1000;
     padding: 20px 0;
@@ -323,6 +336,16 @@ select{
    }
    .card{
     width: 100%;
+   }
+   form{
+       margin-top: 30px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+      flex-wrap: wrap;
+      gap:2rem 1rem;
+      padding: 12px 0;
+   
    }
   
   }

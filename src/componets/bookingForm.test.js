@@ -4,7 +4,7 @@ import BookingForm from '../componets/bookingForm';
 
 describe('Booking form', () => {
   const availableTime = ['17:00', '17:30'];
-  const today = new Date().toISOString().split('T')[0];
+  const today='23-0-15';
   const dispatch = jest.fn();
   const submitForm = jest.fn();
 
@@ -13,30 +13,30 @@ describe('Booking form', () => {
       <BookingForm availableTime={availableTime} submitForm={submitForm} />
     );
 
-    const dateInput = screen.getByLabelText(/Date/);
-    const timeSelect = screen.getByLabelText(/Time/);
-    const timeOptions = await screen.findAllByTestId('booking-time-option');
-    const guestInput = screen.getByLabelText(/Number of guests/);
-    const occasionSelect = screen.getByLabelText(/Occasion/);
-    const occasionOptions = await screen.findAllByTestId(`booking-occasion-option`);
+    const dateInput = screen.getByLabelText('date');
+    const timeSelect = screen.getByLabelText('time');
+    const timeOptions = await screen.findAllByTestId('res_time');
+    const guestInput = screen.getByLabelText('guest');
+    const occasionSelect = screen.getByLabelText('occasion');
+    const occasionOptions = await screen.findAllByTestId(`occasion`);
     const submitInput = screen.getByRole('button');
 
     expect(dateInput).toBeInTheDocument();
     expect(dateInput).toHaveAttribute('type', 'date');
-    expect(dateInput).toHaveAttribute('id', 'booking-date');
+    expect(dateInput).toHaveAttribute('id', 'res_date');
     expect(dateInput).toHaveValue(today);
 
     expect(timeSelect).toBeInTheDocument();
-    expect(timeSelect).toHaveAttribute('id', 'booking-time');
+    expect(timeSelect).toHaveAttribute('id', 'res_time');
     expect(timeOptions.length).toBe(2);
 
     expect(guestInput).toBeInTheDocument();
-    expect(guestInput).toHaveAttribute('id', 'booking-number-guests');
+    expect(guestInput).toHaveAttribute('id', 'guest');
     expect(guestInput).toHaveAttribute('type', 'number');
     expect(guestInput).toHaveValue(1);
 
     expect(occasionSelect).toBeInTheDocument();
-    expect(occasionSelect).toHaveAttribute('id', 'booking-occasion');
+    expect(occasionSelect).toHaveAttribute('id', 'occasion');
     expect(occasionOptions.length).toBe(2);
 
     expect(submitInput).toBeInTheDocument();
@@ -71,7 +71,7 @@ describe('Booking form', () => {
       />
     );
 
-    const dateInput = screen.getByLabelText(/Date/);
+    const dateInput = screen.getByLabelText('Date');
     fireEvent.change(dateInput, { target: { value: '' } });
     fireEvent.blur(dateInput);
     const errorMessage = screen.getByTestId('error-message');
@@ -93,7 +93,7 @@ describe('Booking form', () => {
       />
     );
 
-    const numberOfGuestsInput = screen.getByLabelText(/Number of guests/);
+    const numberOfGuestsInput = screen.getByLabelText('guests');
     fireEvent.change(guestInput, { target: { value: '' } });
     fireEvent.blur(guestInput);
     const errorMessage = screen.getByTestId('error-message');

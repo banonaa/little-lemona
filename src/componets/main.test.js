@@ -11,7 +11,7 @@ describe('Booking page', () => {
     
     );
 
-    const timeOptions = await screen.findAllByTestId('booking-time-option');
+    const timeOptions = await screen.findAllByTestId('re_time');
 
     expect(timeOptions.length).toBeGreaterThanOrEqual(1);
     timeOptions.forEach(timeOption => 
@@ -27,11 +27,11 @@ describe('Booking page', () => {
     );
 
     const bookingDate = '2023-04-01';
-    const dateInput = screen.getByLabelText(/Date/);
-    const initialTimeOptions = await screen.findAllByTestId('booking-time-option');
+    const dateInput = screen.getByLabelText("Date");
+    const initialTimeOptions = await screen.findAllByTestId('res_time');
     fireEvent.change(dateInput, { target: { value: bookingDate } });
     fireEvent.blur(dateInput);
-    const updatedTimeOptions = await screen.findAllByTestId('booking-time-option');
+    const updatedTimeOptions = await screen.findAllByTestId('res_time');
 
     expect(dateInput).toHaveValue(bookingDate);
     initialTimeOptions.forEach(timeOption => 
@@ -42,6 +42,4 @@ describe('Booking page', () => {
     );
     expect(initialTimeOptions.length).not.toBe(updatedTimeOptions.length);
   });
-
-  //test('', () => {});
 });

@@ -12,6 +12,7 @@ function Bookingform(props){
      const handleSubmit=(e)=>{
         e.preventDefault();
         props.submitForm(e);
+        console.log("Form Submitted");
      }
     return(
         <div className="forma">
@@ -25,8 +26,7 @@ function Bookingform(props){
                     <input type="date" value={date} onChange={(e)=>handleChange(e.target.value)} id="res_date" required/>
                    
                     <label htmlFor="res_time">Choose a Time :</label>
-                    <select id="res_time" value={time} onChange={(e)=>setTime(e.target.value)} required>
-                        <option value={""}></option>
+                    <select id="res_time" value={time} onChange={(e)=>setTime(e.target.value)} placeholder="....." required>
                         {
                             props.availableTime.availableTime.map(availableTime =>{
                                 return <option key={availableTime}>{availableTime}</option>
@@ -38,14 +38,14 @@ function Bookingform(props){
 
 
                     <label htmlFor="occasion">what's the occasion ?</label>
-                    <select id="occasion" value={occasion} key={occasion} onChange={(e)=>setOccasion(e.target.value)} required>
+                    <select placeholder="....." id="occasion" value={occasion} key={occasion} onChange={(e)=>setOccasion(e.target.value)} required>
                     <option>Birthday</option>
                     <option>Anniversary</option>
                     </select>
 
             
                 </div>
-                <input className="btn" aria-label="On Click" type="submit" value={"Make Your Resevation"}/>
+                <input  className="btn" aria-label="On Click" type="submit" value={"Make Your Resevation"}/>
             </fieldset>
         </form></div>
     )
